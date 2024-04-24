@@ -12,13 +12,23 @@ document.getElementById('start-game').addEventListener('click', function() {
     // Logic to show instructions
     console.log('Showing instructions...');
   });
-
+  document.addEventListener('DOMContentLoaded', function() {
+    startGame(); // Initialize the game when the DOM is fully loaded
+  });
+  
 // Game state
-let gameState = {
-  currentScene: 'start',
-  skillPoints: 0,
-  emeralds: 0
-};
+// Function to start the game
+function startGame() {
+  gameState = {
+    currentScene: 'start',
+    skillPoints: 0,
+    emeralds: 0
+  };
+  
+  displayScene();
+  updateUI(); // Initialize the display for the inventory and shop
+}
+
 
 // Scenes are the building blocks of our game's narrative
 const scenes = {
@@ -44,8 +54,14 @@ const scenes = {
 // Function to start the game
 function startGame() {
   gameState = { ...gameState, currentScene: 'start' };
+  currentScene; 'start',
+    skillPoints; 0,
+    emeralds; 0
+  };
+  
   displayScene();
-}
+  updateUI(); // Initialize the display for the inventory and shop
+
 
 // Function to handle decisions and outcomes
 function makeDecision(decision) {
