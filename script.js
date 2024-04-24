@@ -98,4 +98,72 @@ function displayOutcome(outcome) {
     document.getElementById('decisions').appendChild(nextMissionButton);
   }
 }
+// Player's inventory
+let inventory = [];
+
+// Available items in the shop
+const shopItems = [
+  { name: 'Stealth Cloak', cost: 3, description: 'Increases your stealth.' },
+  { name: 'Dagger', cost: 2, description: 'A silent weapon for close encounters.' },
+  // ... add more items as needed
+];
+
+// Function to display the shop and handle item purchasing
+function displayShop() {
+  const shopDiv = document.getElementById('shop');
+  shopDiv.innerHTML = ''; // Clear previous shop items
+
+  shopItems.forEach((item, index) => {
+    const itemDiv = document.createElement('div');
+    const buyButton = document.createElement('button');
+    
+    itemDiv.textContent = `${item.name} - ${item.cost} Emeralds - ${item.description}`;
+    buyButton.textContent = 'Buy';
+    buyButton.disabled = gameState.emeralds < item.cost;
+    buyButton.onclick = () => purchaseItem(index);
+
+    itemDiv.appendChild(buyButton);
+    shopDiv.appendChild(itemDiv);
+  });
+}
+
+// Function to handle item purchase
+function purchaseItem(itemIndex) {
+  const item = shopItems[itemIndex];
+  
+  if (gameState.emeralds >= item.cost) {
+    gameState.emeralds -= item.cost;
+    const inventoryItem = inventory.find(i => i.name === item.name);
+    
+    if (inventoryItem) {
+      inventoryItem.quantity++;
+    } else {
+      inventory.push({ ...item, quantity: 1 });
+    }
+    
+    updateUI();
+  } else {
+    alert('Not enough emeralds!');
+  }
+}
+
+// Update UI for emeralds, skill points, and inventory
+function updateUI() {
+  document.getElementById('emeralds').textContent = `Emeralds: ${gameState.emeralds}`;
+  document.getElementById('skill-points').textContent = `Skill Points: ${gameState.skillPoints}`;
+  displayInventory();
+  displayShop();
+}
+
+// Function to display the inventory
+function displayInventory() {
+  const inventoryDiv = document.getElementById('inventory');
+  inventoryDiv.innerHTML = ''; // Clear previous inventory items
+
+  inventory.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.textContent = `${item.name} - Quantity: ${item.quantity}`;
+    inventoryDiv.appendChild(itemDiv);
+  });
+}
 
