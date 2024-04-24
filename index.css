@@ -1,33 +1,16 @@
-
-.story-panel {
-    
-    /*center the panel*/
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-
+body {
+    font-family: 'Arial', sans-serif;
     text-align: center;
-}
-
-#stats {
-    margin-top: 200px;
-    background-color: #7FDBFF;
-}
-
-#name-entry, #intro, #wolves, #vending-machine, #vending-outcome, #firefox, #firefox-surprise, #runaway, #fight, #defeat, #victory {
-    display: none;
-}
-
-#firefox-stats {
-    background-color: #FF851B;
-}
-
-.attack-buttons {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.attack-buttons > button {
-    width: 45%;
-}
+    padding: 20px;
+  }
+  
+  header, footer {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
