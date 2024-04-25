@@ -18,4 +18,12 @@ body {
     display: inline-block;
     margin: 0 10px;
   }
-   
+  .scene-enter {
+    animation: fadeIn 1s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

@@ -161,5 +161,36 @@ function updateUI() {
 function displayInventory() {
   // ... inventory display logic
 }
+// Function to clear the current scene and display the new one
+function changeScene(newScene) {
+  const gameContainer = document.getElementById('game-container');
+  // Clear the current content
+  gameContainer.innerHTML = '';
+
+  // Add the new scene content
+  const scene = scenes[newScene];
+  const sceneDescription = document.createElement('p');
+  sceneDescription.textContent = scene.description;
+  gameContainer.appendChild(sceneDescription);
+
+  // Create buttons for new decisions
+  const decisionsDiv = document.createElement('div');
+  Object.keys(scene.decisions).forEach(decision => {
+    const button = document.createElement('button');
+    button.textContent = scene.decisions[decision];
+    button.onclick = () => makeDecision(decision);
+    decisionsDiv.appendChild(button);
+  });
+
+  gameContainer.appendChild(decisionsDiv);
+
+  // Optional: add CSS classes for animations when changing scenes
+  gameContainer.classList.add('scene-enter');
+}
+
+// Modify the existing displayScene function to call changeScene
+function displayScene() {
+  changeScene(gameState.currentScene);
+}
 
 
