@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Night In New Bellingham - Demo</title>
+        <meta charset="utf-8">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id = "container">
+            <header>
+                <h1>< A_NIGHT_IN_NEW_BELLINGHAM /></h1>
+            </header>
+            <main>
+                <!-- Buttons Go Here -->
+                <img src="#" alt = "picture of current game event" id="image">
+                <div id = "holder">
+                    <div id = "stats"></div>
+                    <div id = "story"></div>
+                    <div id = "passcode">
+                        <input type = "text" id="answer">
+                        <button id="enter" onclick= checkAnswer()>Enter</button>
+                        <button id="giveUp" onclick = displayPage(currentEvent.getRight())>Give Up</button>
+                    </div>
+                    <div id="options">
+                        <button id="option1" onclick = displayPage(currentEvent.getLeft())></button>
+                        <button id="option2" onclick = displayPage(currentEvent.getRight())></button>
+                    </div>
+                    <div id="combat">
+                        <button onclick = battle()>Use Weapon</button>
+                        <button onclick = heal()>Use JuiceBox</button>
+                        <button onclick = flee()>Attempt To Flee</button>
+                    </div>
+                    <div id="towers">
+                        <label for ="from">Move Top Ring From: </label>
+                        <select id ="from">
+                            <option value="tower1">Tower 1</option>
+                            <option value="tower2">Tower 2</option>
+                            <option value="tower3">Tower 3</option>
+                        </select>
+                        <label for ="to"> To: </label>
+                        <select id ="to">
+                            <option value="tower1">Tower 1</option>
+                            <option value="tower2">Tower 2</option>
+                            <option value="tower3">Tower 3</option>
+                        </select>
+                        <button onclick="moveRing(document.getElementById('from').value,document.getElementById('to').value)">Move</button>
+                    </div>
+                    <div id = "reboot">
+                        <P id="rebootContent"></P>
+                        <button onclick = reboot()>Reboot</button>
+                    </div>
+                </div>
+                <div id="inputs">
+                    <label for="save">Save Game</label>
+                    <input type ="button" value="Save" id ="save">
+                    <label for ="upload">Load Game</label>
+                    <input type = "file" id ="upload">
+                </div>
+                <section id ="audioTag">
+                    <p id = "audioName"></p>
+                    <audio controls autoplay loop id="song">
+                        <source src="#" type="audio/mp3"> 
+                    </audio>
+                </section>
+        </main>
+        </div>
+        <!-- Divs for plots -->
+        <div id ="dream">
+            <h2>Welcome To Day_Dream_Drop, An RSG (Random Simulation Generator) Platform Created By:<br><br>TECA ENTERPRISES CORPORATION (A)INDUSTRIES<br><br>New Bellingham's Premier Technology Company!</h2>
+            <p>Generating Simulation: <span id ="complete">0%</span></p>
+            <p class="gameOver">Simulation Generated: <span id = "dreamText"></span></p>
+            <p><a href="#" onclick ='closeWindow("dream")' id="startDream">Start_Dream</a></p>
+        </div>
+        <script src="towers.js"></script>
+        <script src="hashtable.js"></script>
+        <script src="classes.js"></script>
+        <script src="maps.js"></script>
+        <script src="events.js"></script>
+        <script src="utility.js"></script>
+    </body>
+</html>
