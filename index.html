@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Testing copy of Game">
+<title>JavaScript Browser-Based Game</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript" src="scripts/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="scripts/game.js"></script>
+	
+</head>
+<body>
+
+<div id="console">
+	<p>Welcome to the game! </p>
+
+	<p>What is your name?</p>
+
+<div id="character_placeholder"></div>
+
+	<form id="player" onsubmit="return false;">
+	<input type="text" size="20" autofocus="autofocus" id="player_enter">
+	</form>
+
+</div>
+
+<div id="game_start" style="display:none">
+	
+	<p>You are ready to start the game. Type "Help" at any time for a list of commands. Type Location or Look Around to get more information about where you are and what you can do.</p>
+
+	<p>Lord Konniving kidnapped your bethrothed and you must save her (turn into gender variable)! You have disguised yourself as a farmer to go to the town to find out where he is hiding her. You are pulling a cart behind filled with crops. You are surprised to see a guard at the town checkpoint. Lord Konniving must be looking for you. He demands to know your destination.</p>
+	
+	<p>You have a friend at the Castle who could help, but the guard probably won't let you onto the Castle road. You'd have to fight him, and you only brought a knife, but you're a good fighter.</p>
+
+	<p>You could go to the Market and hire some help, buy some equipment or just get some information. Or you could return home to get your sword before fighting the guard.</p>
+
+	<p>What do you decide? You can go to the Castle, the Market or back Home.</p>
+
+	<p id="checkpoint" style="display:none;">You are back at the Checkpoint. The two Guards demand to know your destination. Choose to go to either The Castle, The Market or back Home, if you're not ready to proceed.</p>
+	<!-- turn this into a if statement to come up whenever you chose to go to the checkpoint-->	
+
+	<div id="message_help" style="display:none;"> 
+
+	<p>Enter the following Commands. Type the word or phrase in quotes:</p>
+		<ul>
+			<li>"Look Around"</li>
+			<li>"Go to" ex: Go to Castle or Go Home</li>
+			<!-- <li>"Go West", "Go East", "Go North" or "Go South"</li> -->
+			<li>"Take" an item</li>
+			<li>"Search"</li>
+			<li>"Inventory" list of what you're carrying.</li>
+		</ul>
+
+	</div>
+</div><!-- end console div -->
+	<!--
+	PLACEHOLDER: THIS IS WHERE EVERYTHING WILL BE INSERTED ABOVE
+	-->
+
+	<div id="placeholder"></div>
+
+<div id="main_form" style="display:none;">
+	<form onsubmit="return false;">
+	<input type="text" size="50" autofocus="autofocus" id="command_line">
+	</form>
+</div>
+
+</body>
+</html>
