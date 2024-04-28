@@ -7,4 +7,4 @@ document.getElementById('help-btn').addEventListener('click', function() {
     }
 });
 
-// Add similar event listeners for 'start-btn' and 'load-btn' as needed.
+// Consider adding more functionality here for starting or loading games.
