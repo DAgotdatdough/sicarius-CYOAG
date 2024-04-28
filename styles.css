@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Press Start 2P', cursive; /* Changed to match the fantasy theme */
-    background-image: url('../images/option1.jpg'); /* Replace with your background image */
+    background-image: ('/images/option1.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     color: black;
@@ -56,4 +56,8 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 0.8em;
+}
+
+help-section p {
+    color: black; /* Or any other light color that contrasts well with the background */
 }
