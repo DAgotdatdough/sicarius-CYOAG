@@ -10,7 +10,7 @@ body {
     background-image: ('/images/option1.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
-    color: black;
+    color: white;
     text-align: center;
     background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -30,7 +30,7 @@ nav button {
     padding: 10px 20px;
     margin: 0 10px;
     background-color: #444;
-    color: black;
+    color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
