@@ -7,8 +7,9 @@
 
 body {
     font-family: 'Press Start 2P', cursive; /* Changed to match the fantasy theme */
-    background-image: url('background.jpg'); /* Replace with your background image */
+    background-image: url('option1.jpg'); /* Replace with your background image */
     background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
 }
