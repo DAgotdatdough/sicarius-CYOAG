@@ -45,7 +45,6 @@ nav button:hover {
 
 .hidden {
     display: none;
-    color: black;
 }
 
 footer {
@@ -56,4 +55,6 @@ footer {
     width: 100%;
     font-size: 0.8em;
 }
-
+#help-section p {
+    color: black; /* This will make the text color black */
+}
