@@ -1,0 +1,55 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+nav button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #666;
+}
+
+#introduction {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+}
