@@ -6,5 +6,7 @@ document.getElementById('help-btn').addEventListener('click', function() {
         helpSection.classList.add('hidden');
     }
 });
-
-// Consider adding more functionality here for starting or loading games.
+// Example of a simple script to handle initial game setup or decisions
+document.addEventListener('DOMContentLoaded', function() {
+    alert("Your adventure begins now!");
+});

@@ -6,13 +6,14 @@
 }
 
 body {
-    font-family: 'Press Start 2P', cursive; /* Changed to match the fantasy theme */
-    background-image: url('images/option1.jpg'); /* Replace with your background image */
+    font-family: 'Press Start 2P', cursive; 
+    background-image: url('images/option2.jpg'); 
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     color: white;
     text-align: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 header {
@@ -55,6 +56,8 @@ footer {
     width: 100%;
     font-size: 0.8em;
 }
-#help-section p {
-    color: black; /* This will make the text color black */
+#help-section {
+    color: white; /* This will make the text color black */
+    margin-top: 10px;
 }
+
