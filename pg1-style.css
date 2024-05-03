@@ -1,0 +1,66 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/alley.jpg');
+    background-size: 110%; /* Initial size before animation */
+    background-position: center center; /* Keep the background centered */
+    background-repeat: no-repeat; /* Prevent tiling of the background image */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    animation: zoomOutBackground 3s ease-out forwards; /* Apply the animation */
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+}
+
+/* Keyframes */
+@keyframes zoomOutBackground {
+    from {
+        background-size: 110%; /* Start zoomed in to prevent edges showing */
+    }
+    to {
+        background-size: 100%; /* End at the normal background size */
+    }
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    color: #ffffff; /* Text color for all header content */
+}
+
+h1 {
+    margin-bottom: 12px;
+}
+
+/* Dialogue Section */
+#dialogue {
+    margin-top: 20px; /* Adjust the value as needed for more space */
+    color: #ffffff; /* Slightly whiter shade for dialogue text */
+}
+
+/* Button Styles */
+#accept-mission {
+    display: none; /* Start as hidden and show after typewriting effect */
+    background-color: #444; /* Dark background for the button */
+    color: white; /* Text color */
+    border: none; /* No border for a cleaner look */
+    padding: 10px 20px; /* Padding for a larger clickable area */
+    font-family: 'Saira Extra Condensed', cursive;
+    font-size: 18px; /* Font size to make it readable */
+    font-weight: bold; /* Bold text to make it stand out */
+    cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#accept-mission:hover {
+    background-color: #666; /* Lighter background on hover to indicate interactivity */
+    text-decoration: underline; /* Underline text on hover for additional indication */
+}
+

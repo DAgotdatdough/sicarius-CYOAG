@@ -1,0 +1,22 @@
+@keyframes zoomOutBackground {
+    from {
+        background-size: 110%; /* Adjusted initial zoom to prevent edges showing */
+    }
+    to {
+        background-size: 100%; /* End at the normal background size */
+    }
+}
+
+body {
+    background-image: url('images/outsidemansion.jpg');
+    background-size: 110%; /* Initial size before animation */
+    background-position: center center; /* Keep the background centered */
+    background-repeat: no-repeat; /* Prevent tiling of the background image */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    animation: zoomOutBackground 3s ease-out forwards; /* Apply the animation */
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+}
+
