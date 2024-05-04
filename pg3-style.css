@@ -1,0 +1,22 @@
+
+body {
+    background-image: url('images/sneaking.jpg'); /* Change URL as per page requirement */
+    background-size: cover; /* Ensures the background covers the entire element */
+    background-position: center center; /* Centers the background */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    animation: zoomOutBackground 3s ease-out forwards;
+    background-color: black; /* Fallback background color */
+    height: 100vh; /* Full viewport height */
+    color: white;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+@keyframes zoomOutBackground {
+    from {
+        background-size: 110%; /* Start zoomed in */
+    }
+    to {
+        background-size: 100%; /* Smoothly transition to normal size */
+    }
+}

@@ -17,17 +17,21 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
-    height: 100%; 
-    font-family: 'Saira Extra Condensed', sans-serif;
-    color: white;
+    height: 100vh; 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Aligns the container vertically */
+    justify-content: center; /* Aligns the container horizontally to the right */
+    color: white;
+    font-family: 'Saira Extra Condensed', sans-serif;
 }
 
 #options-container {
-    width: 50%;
-    text-align: center;
+    width: 15%; /* Adjust the width as necessary */
+    margin-left: 2%; /* Adds space from the right edge */
+    text-align: center; /* Aligns text to the left within the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the options vertically within the container */
 }
 
 .option {
@@ -40,13 +44,14 @@ body {
     transition: opacity 2s ease-in-out;
 }
 
-@keyframes zoomOutBackground {
-    from {
-        background-size: 110%;
-    }
-    to {
-        background-size: 100%;
-    }
+#arrival {
+    width: 50%; /* Full width to center the text properly */
+    text-align: center; /* Centers the text within the div */
+    margin-top: 20px; /* Adds some space at the top */
+    background: rgba(0, 0, 0, 0.8); /* Makes background slightly transparent */
+    padding: 10px; /* Adds padding for visual comfort */
+    border: 1px solid white;
 }
+
 
 
