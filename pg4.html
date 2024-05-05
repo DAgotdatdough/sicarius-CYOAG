@@ -22,12 +22,19 @@
         <div id="guard" class="character">
             <img src="images/guard.png" alt="Guard">
         </div>
-        <div id="assassin-stats" class="stats">
-            Assassin Health: <span id="assassin-health">100</span>
+        <div id="assassin-health-bar-container" class="health-bar-container">
+            <div class="health-bar">
+                <div id="assassin-health-bar" class="health" style="width: 100%;">Assassin Health: <span id="assassin-health">100</span></div>
+            </div>
         </div>
-        <div id="guard-stats" class="stats">
-            Guard Health: <span id="guard-health">100</span>
+        
+        <div id="guard-health-bar-container" class="health-bar-container">
+            <div class="health-bar">
+                <div id="guard-health-bar" class="health" style="width: 100%;">Guard Health: <span id="guard-health">100</span></div>
+            </div>
         </div>
+        
+        
         <button id="attack-button">Attack</button>
         <div id="game-message"></div>
     </div>

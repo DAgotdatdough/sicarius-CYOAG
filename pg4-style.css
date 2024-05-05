@@ -1,18 +1,101 @@
 body {
-    
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevents scrolling */
     text-align: center;
-    padding: 20px;
-    background-image: url('images/sneaking.jpg');
+    background-image: url('images/fight.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: zoomOutBackground 3s ease-out forwards;
     background-color: black;
-    height: 100vh;
+    animation: zoomOutBackground 3s ease-out forwards;
     color: white;
     font-family: 'Saira Extra Condensed', sans-serif;
 }
+
+h1 {
+    font-size: 48px; /* Larger font size for more prominence */
+}
+
+
+#battle-container {
+    position: fixed; /* Fixed positioning relative to the viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the container perfectly */
+    width: 90%; /* Adjust based on your content */
+    max-width: 1200px; /* Optional: limits how wide the container can get */
+}
+
+.character img {
+    width: 300px; /* Adjust size accordingly */
+    transition: transform 0.5s;
+}
+
+#assassin, #guard {
+    position: absolute;
+}
+
+.stats {
+    position: absolute;
+    width: 100%;
+}
+
+#attack-button, #game-message {
+    position: fixed; /* Fixed position to keep them static on the page */
+    left: 50%; /* Central alignment */
+    transform: translateX(-50%); /* Ensures it is centered regardless of the width */
+}
+
+#attack-button {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: #FFFFFF;
+    background: linear-gradient(145deg, #000000, #8f978a, #000000);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#attack-button:hover {
+    background: linear-gradient(145deg, #9a2219, #b21f1f, #9a0c0c);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+#attack-button:active {
+    background: linear-gradient(145deg, #b21f1f, #e80606, #860808);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%) translateY(2px);
+}
+
+#game-message {
+    position: absolute;
+    top: 10%; /* Position near the top of the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
+    width: 100%;
+    padding: 10px 0; /* Padding for better spacing */
+    font-size: 24px; /* Larger font size for better visibility */
+    font-family: 'Saira Extra Condensed', sans-serif; /* Consistent with the game's theme */
+    color: #FFD700; /* Gold color for importance and visibility */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* Text shadow for better readability */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    text-align: center; /* Ensure text is centered */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Soft shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
     
 @keyframes zoomOutBackground {
         from {
@@ -26,7 +109,13 @@ body {
 
 #battle-container {
     position: relative;
-    height: 200px;
+    width: 100%; /* Ensure the container spans the full width of the viewport */
+    height: 100vh; /* Use the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .character img {
@@ -37,13 +126,13 @@ body {
 #assassin {
     position: absolute;
     left: 50px;
-    top: 180px;
+    top: 400px;
 }
 
 #guard {
     position: absolute;
     right: 50px;
-    top: 140px;
+    top: 350px;
 }
 
 @keyframes attackAnimation {
@@ -52,13 +141,82 @@ body {
     100% { transform: translateX(0); } /* Return to original position */
 }
 
+@keyframes guardAttackAnimation {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-150px); } /* Move towards the assassin */
+    100% { transform: translateX(0); } /* Return to original position */
+}
+
 .stats {
-    margin-top: 220px;
+    position: absolute;
+    width: 100%; /* Full width */
+    text-align: center; /* Center the text */
+    bottom: 50%; /* Position from the bottom */
+    color: rgb(255, 255, 255);;
+    font-size: 18px;;
+    top: 250;
+}
+
+#assassin-stats {
+    right: 480px; /* Adjust as necessary */
+    top: 250px
+
+}
+
+#guard-stats {
+    left: 340px;
+    top: 250px;
+}
+
+#attack-button {
+    position: absolute;
+    bottom: 20%; /* Adjust as necessary */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
 }
 
 #game-message {
-    margin-top: 20px;
-    font-weight: bold;
-    color: red;
+    position: absolute;
+    top: 10%; /* Position near the top of the viewport */
+    width: 100%;
+    text-align: center;
+}
+
+.health-bar-container {
+    position: absolute;
+    width: 200px;  /* Width of the health bar */
+    display: inline-block;
+    background-color: #555;  /* Dark background for contrast */
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#assassin-health-bar-container {
+    left: 70px; /* Example position, adjust as needed */
+    top: 350px; /* Adjust to move up or down */
+}
+
+#guard-health-bar-container {
+    right: 80px; /* Example position, adjust as needed */
+    top: 300px; /* Adjust to move up or down */
+}
+
+.health-bar {
+    width: 100%;
+    height: 28px;
+    background-color: #555;
+    border-radius: 2px; /* Rounded corners for the bar */
+}
+
+.health {
+    position: relative;
+    height: 100%;
+    background-color: #f70101; /* Red color for the health */
+    width: 100%; /* Initially full width */
+    transition: width 0.5s ease-in-out; /* Animation for health reduction */
+    color: white; /* Text color */
+    font-size: 16px; /* Text size */
+    line-height: 28px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
 }
 
