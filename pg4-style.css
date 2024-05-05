@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#battle-container {
+    position: relative;
+    height: 200px;
+}
+
+.character img {
+    width: 100px; /* Adjust size accordingly */
+    transition: transform 0.5s;
+}
+
+#assassin {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#guard {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+@keyframes attackAnimation {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(150px); } /* Move towards the guard */
+    100% { transform: translateX(0); } /* Return to original position */
+}
+
+.stats {
+    margin-top: 220px;
+}
+
+#game-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: red;
+}
+

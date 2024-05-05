@@ -1,66 +1,64 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-image: url('images/alley.jpg');
-    background-size: 110%; /* Initial size before animation */
-    background-position: center center; /* Keep the background centered */
-    background-repeat: no-repeat; /* Prevent tiling of the background image */
-    background-attachment: fixed; /* Keep the background fixed during scrolling */
-    animation: zoomOutBackground 3s ease-out forwards; /* Apply the animation */
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    height: 100%; 
-}
-
-/* Keyframes */
 @keyframes zoomOutBackground {
     from {
-        background-size: 110%; /* Start zoomed in to prevent edges showing */
+        background-size: 110%; /* Adjusted initial zoom to prevent edges showing */
     }
     to {
         background-size: 100%; /* End at the normal background size */
     }
 }
 
-/* Header Styles */
+/* Body and overall layout adjustments */
+body {
+    background-image: url('images/alley.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: zoomOutBackground 3s ease-out forwards;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Changed from default to column to align items vertically */
+    align-items: center; /* Keeps everything centered horizontally */
+    justify-content: flex-start; /* Adjusts content to start from the top */
+    color: white;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
 header {
-    padding: 20px;
-    color: #ffffff; /* Text color for all header content */
+    width: 100%; /* Ensures the header spans the full width */
+    text-align: center; /* Centers the text inside the header */
+    padding: 20px 0; /* Adds padding on top and bottom */
 }
 
-h1 {
-    margin-bottom: 12px;
-}
-
-/* Dialogue Section */
 #dialogue {
-    margin-top: 20px; /* Adjust the value as needed for more space */
-    color: #ffffff; /* Slightly whiter shade for dialogue text */
+    width: 50%; /* Adjusted for appropriate width */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin: 10px auto; /* Centers the dialogue box horizontally */
+    border: 1px solid white;
 }
 
-/* Button Styles */
-#accept-mission {
-    display: none; /* Start as hidden and show after typewriting effect */
-    background-color: #444; /* Dark background for the button */
-    color: white; /* Text color */
-    border: none; /* No border for a cleaner look */
-    padding: 10px 20px; /* Padding for a larger clickable area */
-    font-family: 'Saira Extra Condensed', cursive;
-    font-size: 18px; /* Font size to make it readable */
-    font-weight: bold; /* Bold text to make it stand out */
-    cursor: pointer; /* Cursor to pointer to indicate it's clickable */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-    border-radius: 5px; /* Rounded corners */
+#options-container {
+    width: auto; /* Adjust width to fit the content */
+    position: absolute; /* Positioning it absolutely within the relative parent */
+    right: 200px; /* Distance from the right edge of the viewport */
+    bottom: 600px; /* Distance from the bottom edge of the viewport */
+    text-align: right; /* Aligns the text and the button to the right */
 }
 
-#accept-mission:hover {
-    background-color: #666; /* Lighter background on hover to indicate interactivity */
-    text-decoration: underline; /* Underline text on hover for additional indication */
+.option {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 10px 0; /* Maintain vertical spacing between multiple options if added */
+    padding: 15px;
+    border: 1px solid white;
+    cursor: pointer;
+    opacity: 0; /* Initially hidden, will appear with transition */
+    transition: opacity 2s ease-in-out; /* Smooth transition for appearance */
+    display: block; /* Ensures the button is treated as a block for spacing */
 }
+
 
