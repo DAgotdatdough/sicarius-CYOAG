@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Adventure Begins - Sicarius</title>
     <link rel="stylesheet" href="pg2-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -13,13 +12,15 @@
 
     </style>
 </head>
-
-
 <body>
+    <button onclick="toggleMute()" id="muteButton"><img id="mute_img" alt="Mute button"></button>
+    <audio id="gameMusic" autoplay>
+        <source src="music/Shadows of the Night.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <div id="arrival" class="typewrite-dialogue"></div>
     <div id="options-container">
-        <div class="option" onclick="navigate('pg3.html');" style="display: none;">Option 1: Sneak through the back.</div>
-        <div class="option" onclick="navigate('pg4.html');" style="display: none;">Option 2: Disguise yourself as a guest.</div>
+        <div class="option" onclick="navigate('pg3.html');" style="display: none;">Sneak through the back.</div>
     </div>
 
     <script src="pg2-script.js"></script>

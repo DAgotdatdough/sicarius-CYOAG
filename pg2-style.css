@@ -8,7 +8,6 @@
 }
 
 body {
-    background-image: url('images/outsidemansion.jpg');
     background-size: 110%; 
     background-position: center center;
     background-repeat: no-repeat;
@@ -53,5 +52,15 @@ body {
     border: 1px solid white;
 }
 
+#muteButton {
+    position: absolute;
+    top: 20px;  
+    right: 60px; 
+}
+
+#mute_img {
+    width: 35px;
+    height: 30px;
+}
 
 

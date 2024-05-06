@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adventure Begins - Sicarius</title>
+    <link rel="stylesheet" href="pg7-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('images/dead-lord.jpg');
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="toggleMute()" id="muteButton"><img id="mute_img" src="images/mute-off.png" alt="Mute button"></button>
+    <audio id="gameMusic" autoplay>
+        <source src="music/death-scream.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="Death" class="typewrite-dialogue"></div>
+    <div id="options-container">
+        <div class="option" onclick="navigate('reward.html');" style="display: none;"> Finish mission </div>
+    </div>
+    <script src="pg7-script.js"></script>
+</body>
+</html>

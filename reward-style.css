@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: zoomOutBackground 3s ease-out forwards;
+    background-color: black;
+    height: 100vh;
+    color: white;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    position: relative; /* Sets a positioning context for absolute elements */
+}
+
+@keyframes zoomOutBackground {
+    from {
+        background-size: 110%;
+    }
+    to {
+        background-size: 100%;
+    }
+}
+
+#options-container {
+    position: absolute; /* Positions relative to the nearest positioned ancestor (body in this case) */
+    top: 40%; /* Positions container 10% from the bottom of the viewport */
+    left: 5%; /* Positions container 5% from the right of the viewport */
+    width: 200px; /* Fixed width */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid white;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#Reward {
+    position: absolute; /* Ensures the element is positioned according to the body */
+    top: 25%; /* Distance from the top */
+    left: 5%; /* Distance from the left */
+    width: 700px; /* Width relative to its container */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+#muteButton {
+    position: absolute;
+    top: 20px;  
+    right: 60px; 
+}
+
+#mute_img {
+    width: 35px;
+    height: 30px;
+}

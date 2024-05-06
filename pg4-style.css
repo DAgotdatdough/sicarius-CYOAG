@@ -4,7 +4,6 @@ body {
     height: 100vh; /* Full height of the viewport */
     overflow: hidden; /* Prevents scrolling */
     text-align: center;
-    background-image: url('images/fight.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

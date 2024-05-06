@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Sicarius: Choose Your Own Adventure</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-image: url('images/startpage.jpg');
+        }
+    </style>
 
 </head>
+
 <body>
     <header>
         <h1>Sicarius: Choose Your Own Adventure</h1>
-        <button onclick="toggleMute()" id="muteButton"><img id="mute_img" src="images/volume_off.svg" alt="Mute button"></button>
         <nav>
             <button id="start-btn" onclick="window.location.href='pg1.html';">Start New Game</button>
-            <button id="load-btn">Continue Story</button>
             <button id="help-btn">Help</button>
         </nav>
     </header>
+    <button onclick="toggleMute()" id="muteButton"><img id="mute_img" alt="Mute button"></button>
     <audio id="gameMusic" loop autoplay>
         <source src="music/Shadows of the Night.mp3" type="audio/mp3">
         Your browser does not support the audio element.
@@ -27,7 +34,12 @@
             <p>Welcome to Sicarius, a world where your choices as an assassin determine the path of your story.</p>
         </section>
         <section id="help-section" class="hidden">
-            <p>Need help? This section will guide you on how to play the game, make choices, and navigate through your adventure.</p>
+            <p> Welcome to Sicarius! As an assassin navigating through dangerous missions, your choices directly influence your path and outcomes in the game. This section provides you with guidance on how to play the game, understand game mechanics, and tips for effective decision-making.
+                Getting Started
+                Navigating the Game: Use the on-screen prompts to make choices. Each choice can lead you down a different path, so choose wisely!
+                Main Menu: Access the main menu to start a new game, load a saved game.
+                Gameplay Mechanics
+                Choices: Each decision affects the storyline and your character's development. Think strategically about the consequences of your actions.</p>
         </section>
     </main>
     <footer>
@@ -35,4 +47,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reward-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('images/reward.jpg');
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="toggleMute()" id="muteButton"><img id="mute_img" alt="Mute button"></button>
+    <audio id="gameMusic" autoplay>
+        <source src="music/The Hunter's Triumph.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="Reward" class="typewrite-dialogue"></div>
+    <div id="options-container">
+        <div class="option" onclick="navigate('index.html');" style="display: none;"> Back to Start </div>
+    </div>
+    <script src="reward-script.js"></script>
+</body>
+</html>

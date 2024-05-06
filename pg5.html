@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">   
+    <link rel="stylesheet" href="pg5-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('images/end-of-fight.jpg');
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="toggleMute()" id="muteButton"><img id="mute_img" src="images/mute-off.png" alt="Mute button"></button>
+    <audio id="gameMusic" loop autoplay>
+        <source src="music/church-bell.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="Information" class="typewrite-dialogue"></div>
+    <div id="options-container">
+        <div class="option" onclick="navigate('pg6.html');" style="display: none;"> Sneak through the mansion to the study</div>
+    </div>
+    <script src="pg5-script.js"></script>
+</body>
+</html>

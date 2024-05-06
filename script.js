@@ -1,5 +1,5 @@
 
-document.getElementById('help-btn').addEventListener('click', function() {
+document.getElementById('help-btn').addEventListener('click', function () {
     var helpSection = document.getElementById('help-section');
     if (helpSection.classList.contains('hidden')) {
         helpSection.classList.remove('hidden');
@@ -10,20 +10,19 @@ document.getElementById('help-btn').addEventListener('click', function() {
 
 
 function toggleMute() {
-    const audio = document.querySelector("audio");
+    const audio = document.querySelector("#gameMusic");
     const isMuted = localStorage.getItem('muted') === 'true';
-    localStorage.setItem('muted', !isMuted);
-    document.getElementById('mute_img').src = isMuted ? 'images/music-on.png' : 'images/music-off.png';
     if (isMuted) {
-        audio.volume = 0.2;
-        audio.play();
+        localStorage.setItem('muted', 'false');
+        audio.volume = 0.5; // Set your desired volume
+        audio.play(); // Attempt to play the audio
     } else {
+        localStorage.setItem('muted', 'true');
         audio.pause();
     }
+    // Update mute button image
+    loadMuteImg();
 }
-
-
-
 
 function loadMuteImg() {
     const isMuted = localStorage.getItem('muted') === 'true';
@@ -35,7 +34,9 @@ function loadMuteImg() {
     }
 }
 
-window.onload = loadMuteImg;
+window.onload = function () {
+    loadMuteImg(); // Set the correct image for the mute button but don't play audio automatically
+};
 
 
 

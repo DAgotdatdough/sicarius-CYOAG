@@ -9,7 +9,6 @@
 
 /* Body and overall layout adjustments */
 body {
-    background-image: url('images/alley.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -31,6 +30,7 @@ header {
     width: 100%; /* Ensures the header spans the full width */
     text-align: center; /* Centers the text inside the header */
     padding: 20px 0; /* Adds padding on top and bottom */
+    font-size: 22px;
 }
 
 #dialogue {
@@ -61,4 +61,13 @@ header {
     display: block; /* Ensures the button is treated as a block for spacing */
 }
 
+#muteButton {
+    position: absolute;
+    top: 20px;  
+    right: 60px; 
+}
 
+#mute_img {
+    width: 35px;
+    height: 30px;
+}

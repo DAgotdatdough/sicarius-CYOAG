@@ -1,19 +1,14 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Saira Extra Condensed', cursive;
-    background-image: url('images/startpage.jpg'); 
     background-size: cover;
     background-position: center center;
     color: white;
     text-align: center;
     background-repeat: no-repeat;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -23,16 +18,8 @@ header {
 
 h1 {
     margin-bottom: 32px;
+    font-size: 50px;
 }
-
-h2 {
-    font-size: 10px; /* Slightly smaller than h1 */
-}
-
-p {
-    font-size: 24px; /* Standard size for paragraphs, larger than the default body size */
-}
-
 nav button {
     padding: 10px 20px;
     margin: 0 10px;
@@ -41,6 +28,8 @@ nav button {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'Saira Extra Condensed', cursive;
+    font-size: 18px;
 }
 
 nav button:hover {
@@ -50,6 +39,8 @@ nav button:hover {
 #introduction {
     padding: 50px;
     background: rgba(0, 0, 0, 0.6);
+    font-family: 'Saira Extra Condensed', cursive;
+    font-size: 24px;
 }
 
 .hidden {
@@ -64,9 +55,12 @@ footer {
     width: 100%;
     font-size: 0.8em;
 }
+
 #help-section {
     color: white; /* This will make the text color black */
     margin-top: 10px;
+    background: rgba(25, 23, 23, 0.6);
+    font-size: 20px;
 }
 
 #muteButton {
