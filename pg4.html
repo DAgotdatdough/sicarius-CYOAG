@@ -15,6 +15,11 @@
 
 <body>
     <h1>Battle: Assassin vs Guard</h1>
+    <button onclick="toggleMute()" id="muteButton"><img id="mute_img" src="images/music-off.png" alt="Mute button"></button>
+    <audio id="gameMusic" loop autoplay>
+        <source src="music/Sword and Sorcery Battle.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <div id="battle-container">
         <div id="assassin" class="character">
             <img src="images/assassin.png" alt="Assassin">
@@ -34,7 +39,7 @@
             </div>
         </div>
         
-        
+        <button id="next-page-button" style="display: none;">Continue</button>
         <button id="attack-button">Attack</button>
         <div id="game-message"></div>
     </div>

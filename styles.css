@@ -69,6 +69,16 @@ footer {
     margin-top: 10px;
 }
 
+#muteButton {
+    position: absolute;
+    top: 20px;  
+    right: 60px; 
+}
+
+#mute_img {
+    width: 35px;
+    height: 30px;
+}
 
 
 

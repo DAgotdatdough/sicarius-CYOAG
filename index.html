@@ -11,15 +11,20 @@
 <body>
     <header>
         <h1>Sicarius: Choose Your Own Adventure</h1>
+        <button onclick="toggleMute()" id="muteButton"><img id="mute_img" src="images/volume_off.svg" alt="Mute button"></button>
         <nav>
             <button id="start-btn" onclick="window.location.href='pg1.html';">Start New Game</button>
             <button id="load-btn">Continue Story</button>
             <button id="help-btn">Help</button>
         </nav>
     </header>
+    <audio id="gameMusic" loop autoplay>
+        <source src="music/Shadows of the Night.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <main>
         <section id="introduction">
-            <p>Welcome to Sicarius, a world where your choices as an assassin determine the path of your story. Gather skill points, collect emeralds, and choose your fate carefully.</p>
+            <p>Welcome to Sicarius, a world where your choices as an assassin determine the path of your story.</p>
         </section>
         <section id="help-section" class="hidden">
             <p>Need help? This section will guide you on how to play the game, make choices, and navigate through your adventure.</p>
